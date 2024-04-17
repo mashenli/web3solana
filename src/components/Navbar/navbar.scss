@@ -1,0 +1,214 @@
+.navbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 88px;
+    align-items: center;
+    padding: 0 24px;
+
+    &-logo {
+        width: 151px;
+        height: 49px;
+        background-image: url('@/assets/navbar/navbar-logo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-top: 16px;
+    }
+
+    &-menu {
+        display: flex;
+        font-family: Inter, Inter;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+
+        .menu-item {
+            margin-left: 48px;
+            color: #fff;
+            white-space: nowrap;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .menu-item.active {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(0deg, #0CBAF1 0%, #E95CE9 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #fff;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 30px;
+                height: 2px;
+                background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+                border-radius: 20px;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                bottom: -10px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 30px;
+                height: 2px;
+                background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+                border-radius: 20px 20px 20px 20px;
+            }
+        }
+    }
+
+    &-right {
+        display: flex;
+
+        .right-item {
+            margin-left: 24px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.feishu {
+                width: 48px;
+                height: 48px;
+                background: url('@/assets/navbar/navbar-icon-1.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &.youjian {
+                width: 48px;
+                height: 48px;
+                background: url('@/assets/navbar/navbar-icon-2.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &.btn {
+                width: 160px;
+                height: 48px;
+                background: url('@/assets/navbar/navbar-btn.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 751px) {
+    .navbar {
+        height: 16.8vw;
+        padding: 5.333vw 0;
+
+        &-logo {
+            width: 32.267vw;
+            height: 10.533vw;
+            margin-left: 6.133vw;
+            margin-top: 1.067vw;
+        }
+
+        &-menu,
+        .pc {
+            display: none;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+
+            .right-item {
+                &.btn {
+                    width: 21.333vw;
+                    height: 7.333vw;
+                    background: url('@/assets/navbar/navbar-btn-mobile.png');
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                }
+
+                &.menu-icon {
+                    width: 12.267vw;
+                    height: 12.267vw;
+                    background: url('@/assets/navbar/navbar-menu.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    margin-left: 0.2vw;
+                }
+            }
+        }
+
+        &-dropdown {
+            top: 0 !important;
+            width: 100vw;
+            height: 21.333vw;
+
+            .ant-dropdown-menu {
+                background: linear-gradient(180deg, #1C1B63 0%, #051C39 100%);
+                border-radius: 0px 0px 15px 15px;
+                display: flex;
+                justify-content: space-between;
+                padding: 2.533vw 6.133vw;
+
+                .menu-item {
+                    height: 16.267vw;
+                    font-weight: bold;
+                    font-size: 4.133vw;
+                    color: #FFFFFF;
+                    line-height: 16.267vw;
+                    text-align: center;
+                    font-style: normal;
+                    text-transform: none;
+                }
+
+                .menu-item.active {
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 80%;
+                        height: 0.533vw;
+                        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+                        border-radius: 1px;
+                        left: 50%;
+                        top: 0;
+                        transform: translate(-50%, 0);
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 80%;
+                        height: 0.533vw;
+                        background: linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%);
+                        border-radius: 1px;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
+        }
+    }
+}

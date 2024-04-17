@@ -1,0 +1,569 @@
+.mint-wrapper {
+    padding-bottom: 247px;
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 100%;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            content: '';
+            width: 100%;
+            height: 268px;
+            background: url('@/assets/mint/mint-bg-before.png');
+            background-size: 100% 100%;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: 247px;
+            background: linear-gradient(180deg, #0A183C 0%, #1B41A2 100%);
+            z-index: 1;
+            opacity: .8;
+        }
+
+        .bg-item {
+            width: 100vw;
+            height: 794px;
+            margin-top: -1px;
+        }
+
+        .bg-item:nth-child(1) {
+            background: url('@/assets/mint/mint-bg-1.png');
+            background-size: 100% 100%;
+        }
+
+        .bg-item:nth-child(2) {
+            background: url('@/assets/mint/mint-bg-2.png');
+            background-size: 100% 100%;
+        }
+
+        .bg-item:nth-child(3) {
+            background: url('@/assets/mint/mint-bg-3.png');
+            background-size: 100% 100%;
+        }
+
+        .bg-item:nth-child(4) {
+            background: url('@/assets/mint/mint-bg-4.png');
+            background-size: 100% 100%;
+        }
+
+        .bg-item:nth-child(5) {
+            display: none;
+        }
+    }
+
+    &-top {
+        max-width: 1200px;
+        margin: 232px auto 0;
+        padding: 0 24px;
+
+        .top-title {
+            font-family: Inter, Inter;
+            font-weight: bold;
+            font-size: 50px;
+            color: #FFFFFF;
+            line-height: 60px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .top-desc {
+            max-width: 504px;
+            margin-top: 24px;
+            font-family: Inter, Inter;
+            font-weight: 400;
+            font-size: 24px;
+            color: #FFFFFF;
+            line-height: 48px;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+        }
+    }
+
+    &-control {
+        position: relative;
+        max-width: 1230px;
+        margin: -48px auto 0;
+        height: 874px;
+        background: url('@/assets/mint/mint-input-bg.png');
+        background-size: 100% 100%;
+
+        .control-form {
+            position: relative;
+            width: 794px;
+            top: 194px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            &-item {
+                background: url('@/assets/mint/mint-form-bg.png');
+                width: 100%;
+                height: 100px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-bottom: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 38px;
+                border: none;
+                line-height: 29px;
+                font-size: 24px;
+                color: #FFFFFF;
+            }
+
+            &-item:nth-child(2) {
+                margin-bottom: 0;
+            }
+
+            &-title {
+                margin-top: 19px;
+                text-align: center;
+                font-family: Inter, Inter;
+                font-weight: bold;
+                font-size: 48px;
+                color: #FFFFFF;
+                line-height: 56px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+            }
+
+            &-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 37px;
+                background: url('@/assets/mint/mint-form-btn.png');
+                width: 100%;
+                height: 100px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                font-family: Inter, Inter;
+                font-weight: bold;
+                font-size: 32px;
+                color: #FFFFFF;
+                line-height: 38px;
+                text-align: center;
+                font-style: normal;
+                text-transform: none;
+            }
+        }
+
+        .control-btn {
+            position: absolute;
+            left: 50%;
+            bottom: -104px;
+            transform: translate(-50%, 0);
+            width: 394px;
+            height: 208px;
+            background: url('@/assets/mint/mint-btn.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &-protocol {
+        max-width: 1200px;
+        margin: 136px auto 0;
+        padding: 0 24px;
+
+        .protocol-item {
+            max-width: 1104px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            &-img {
+                width: 434px;
+                height: 197px;
+                background: url('@/assets/mint/mint-protocol-1.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transform: rotate(3deg);
+            }
+
+            &-main {
+                flex: 1;
+                margin-left: 56px;
+                padding: 10px 0;
+
+                .main-title {
+                    font-family: Inter, Inter;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: #FFFFFF;
+                    line-height: 28px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                    background: linear-gradient(90deg, #26AEF0 0%, #DD60E9 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .main-desc {
+                    margin-top: 24px;
+                    font-family: Inter, Inter;
+                    font-weight: 300;
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    line-height: 50px;
+                    text-align: left;
+                    font-style: normal;
+                    text-transform: none;
+                }
+            }
+        }
+
+        .protocol-item:nth-child(2) {
+            margin-top: 47px;
+            flex-direction: row-reverse;
+
+            .protocol-item-img {
+                transform: rotate(6deg);
+                width: 444px;
+                height: 233px;
+                background: url('@/assets/mint/mint-protocol-2.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .protocol-item-main {
+                margin-left: 0;
+                margin-right: 56px;
+            }
+        }
+
+        .protocol-item:nth-child(3) {
+            margin-top: 47px;
+            flex-direction: row-reverse;
+
+
+            .protocol-item-img {
+                width: 372px;
+                height: 372px;
+                background: url('@/assets/mint/mint-protocol-3.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .protocol-item-main {
+                margin-left: 0;
+                margin-right: 56px;
+            }
+        }
+    }
+
+    &-excellence {
+        max-width: 1152px;
+        margin: 55px auto 104px;
+
+        .excellence-title {
+            font-family: Inter, Inter;
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 47px;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+            background: linear-gradient(0deg, #0CBAF1 0%, #E95CE9 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .excellence-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+
+            .icons-item {
+                width: 126px;
+                height: 126px;
+
+                &:nth-child(1) {
+                    background: url('@/assets/mint/mint-excellence-1.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:nth-child(2) {
+                    background: url('@/assets/mint/mint-excellence-2.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:nth-child(3) {
+                    background: url('@/assets/mint/mint-excellence-3.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:nth-child(4) {
+                    background: url('@/assets/mint/mint-excellence-4.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:nth-child(5) {
+                    background: url('@/assets/mint/mint-excellence-5.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                &:nth-child(6) {
+                    background: url('@/assets/mint/mint-excellence-6.png');
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 751px) {
+    .mint-wrapper {
+        padding-bottom: 49.333vw;
+
+        &-bg {
+            &::before {
+                height: 68.267vw;
+                background: linear-gradient(180deg, #191A5F 0%, rgba(52, 54, 197, 0) 100%);
+            }
+
+            &::after {
+                height: 49.333vw;
+            }
+
+            .bg-item {
+                height: 85.467vw;
+            }
+
+            .bg-item:nth-child(1) {
+                background: url('@/assets/mint/mint-bg-1-mobile.png');
+                background-size: 100% 100%;
+            }
+
+            .bg-item:nth-child(2) {
+                margin-top: -3px;
+                background: url('@/assets/mint/mint-bg-2-mobile.png');
+                background-size: 100% 100%;
+            }
+
+            .bg-item:nth-child(3) {
+                background: url('@/assets/mint/mint-bg-3-mobile.png');
+                background-size: 100% 100%;
+            }
+
+            .bg-item:nth-child(4) {
+                margin-top: -0.4vw;
+                background: url('@/assets/mint/mint-bg-4-mobile.png');
+                background-size: 100% 100%;
+            }
+
+            .bg-item:nth-child(5) {
+                display: block;
+                background: url('@/assets/mint/mint-bg-5-mobile.png');
+                background-size: 100% 100%;
+            }
+        }
+
+        &-top {
+            margin: 32.8vw 6.133vw 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0;
+
+            .top-title {
+                font-size: 9.2vw;
+                line-height: 15.333vw;
+                text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+                text-align: right;
+            }
+
+            .top-desc {
+                font-size: 2.933vw;
+                line-height: 7.067vw;
+                text-align: right;
+                margin-top: 2.8vw;
+            }
+        }
+
+        &-control {
+            width: 99.867vw;
+            height: 89.867vw;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background: url('@/assets/mint/mint-input-bg-mobile.png');
+            background-size: 100% 100%;
+
+            .control-form {
+                position: relative;
+                width: 81.6vw;
+                top: 17.867vw;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                &-item {
+                    height: 12.667vw;
+                    margin-bottom: 2.533vw;
+
+                    padding: 4.267vw;
+                    font-size: 3.6vw;
+                    line-height: 4.133vw;
+                    text-transform: none;
+                }
+
+                &-item:nth-child(2) {
+                    margin-bottom: 0;
+                }
+
+                &-title {
+                    margin-top: 2.533vw;
+                    font-size: 5.067vw;
+                    line-height: 6vw;
+                }
+
+                &-btn {
+                    margin-top: 1.333vw;
+                    width: 100%;
+                    height: 10.133vw;
+                    font-size: 5.067vw;
+                    line-height: 6vw;
+                }
+            }
+
+            .control-btn {
+                position: absolute;
+                left: 50%;
+                bottom: -10vw;
+                transform: translate(-50%, 0);
+                width: 60.667vw;
+                height: 20.133vw;
+                background: url('@/assets/mint/mint-btn-mobile.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        &-protocol {
+            margin: 24.2vw 3.067vw 0;
+            padding: 0;
+
+            .protocol-item {
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+
+                &-img {
+                    margin-top: 3.2vw;
+                    margin-left: -1.067vw;
+                    width: 64.667vw;
+                    height: 29.467vw;
+                    background: url('@/assets/mint/mint-protocol-1-mobile.png');
+                    background-size: 100% 100%;
+                }
+
+                &-main {
+                    margin-left: -10.133vw;
+                    padding: 0;
+
+                    .main-title {
+                        font-size: 3.067vw;
+                        line-height: 3.6vw;
+                    }
+
+                    .main-desc {
+                        margin-top: 2.533vw;
+                        font-size: 2.533vw;
+                        line-height: 6.133vw;
+                    }
+                }
+            }
+
+            .protocol-item:nth-child(1) {
+                .protocol-item-img {
+                    margin-top: -9.2vw;
+                }
+            }
+
+            .protocol-item:nth-child(2) {
+                margin-top: 11.6vw;
+                flex-direction: row-reverse;
+
+                .protocol-item-img {
+                    margin-left: -6.267vw;
+                    margin-top: 2.667vw;
+                    width: 49.067vw;
+                    height: 22.4vw;
+                    background: url('@/assets/mint/mint-protocol-2-mobile.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .protocol-item-main {
+                    margin-left: 3.733vw;
+                    margin-right: 0;
+                    margin-top: -2.667vw;
+                }
+            }
+
+            .protocol-item:nth-child(3) {
+                margin-top: 11.667vw;
+                flex-direction: row-reverse;
+
+
+                .protocol-item-img {
+                    width: 41.867vw;
+                    height: 41.867vw;
+                }
+
+                .protocol-item-main {
+                    margin-left: 3.733vw;
+                    margin-right: 5.333vw;
+                }
+            }
+        }
+
+        &-excellence {
+            margin: 9.933vw 6.133vw 6.133vw;
+
+            .excellence-title {
+                font-size: 7.067vw;
+                line-height: 8.4vw;
+            }
+
+            .excellence-icons {
+                margin-top: 8.133vw;
+
+                .icons-item {
+                    width: 15.733vw;
+                    height: 15.733vw;
+                }
+            }
+        }
+    }
+}

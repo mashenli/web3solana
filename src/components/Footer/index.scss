@@ -1,0 +1,188 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 247px;
+    margin-top: -247px;
+    z-index: 10;
+
+    border-top: 1px solid;
+    border-image: linear-gradient(90deg, rgba(12, 186, 241, 1), rgba(233, 92, 233, 1)) 1 1;;
+
+    // &::before {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     content: '';
+    //     background: linear-gradient(180deg, #0A183C 0%, #1B41A2 100%);
+    //     z-index: -2;
+    // }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 40px;
+
+        &-item {
+            position: relative;
+            margin: 0 85px;
+            font-family: Inter, Inter;
+            font-weight: 500;
+            font-size: 24px;
+            color: #FFFFFF;
+            line-height: 26px;
+            text-align: right;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        &-item::after {
+            position: absolute;
+            content: '|';
+            width: 16px;
+            height: 26px;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;
+            right: -84px;
+        }
+
+        &-item:last-of-type::after {
+            display: none;
+        }
+    }
+
+    &-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
+
+        &-item {
+            width: 48px;
+            height: 48px;
+            margin-right: 56px;
+        }
+
+        &-item:nth-child(1) {
+            background: url('@/assets/footer-icon-1.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &-item:nth-child(2) {
+            background: url('@/assets/footer-icon-2.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &-item:nth-child(3) {
+            background: url('@/assets/footer-icon-3.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &-item:nth-child(4) {
+            background: url('@/assets/footer-icon-4.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        &-item:nth-child(5) {
+            background: url('@/assets/footer-icon-5.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-right: 0;
+        }
+    }
+
+    &-copyright {
+        margin-top: 48px;
+        font-family: Inter, Inter;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 16px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+    }
+
+    &-bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: url('@/assets/footer-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: .5;
+    }
+}
+
+@media (max-width: 751px) {
+    .footer {
+        height: 49.333vw;
+        margin-top: -49.333vw;
+        // background: url('@/assets/footer-bg-mobile.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        &-bg {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: url('@/assets/footer-bg-mobile.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            opacity: .5;
+        }
+
+        &-menu {
+            padding-top: 10.133vw;
+
+            &-item {
+                margin: 0 5.067vw;
+                font-size: 4.133vw;
+                color: #FFFFFF;
+                line-height: 6.667vw;
+            }
+
+            &-item::after {
+                width: 4.133vw;
+                height: 6.667vw;
+                font-size: 4.133vw;
+                line-height: 6.667vw;
+                color: #FFFFFF;
+                right: -5.067vw;
+            }
+        }
+
+        &-icons {
+            margin-top: 8.133vw;
+
+            &-item {
+                width: 8.133vw;
+                height: 8.133vw;
+                margin-right: 7.6vw;
+            }
+        }
+
+        &-copyright {
+            margin-top: 8.133vw;
+            font-weight: 400;
+            font-size: 2.533vw;
+            line-height: 2.933vw;
+        }
+    }
+}

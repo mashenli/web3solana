@@ -1,0 +1,147 @@
+@media (max-width: 750px) {
+    .connect-drawer {
+        width: 100vw !important;
+        height: 101.733vw !important;
+        background: url('@/assets/connect/bg-mobile.png') !important;
+        background-size: 100% 100% !important;
+
+        .connect-drawer-content {
+            .drawer-content-top {
+                display: flex;
+                justify-content: space-between;
+
+                .top-item {
+
+                    &-icon {
+                        width: 15.333vw;
+                        height: 15.333vw;
+                        margin-bottom: 2.533vw;
+                    }
+
+                    &-title {
+                        font-family: Inter, Inter;
+                        font-weight: 400;
+                        font-size: 2.533vw;
+                        color: #FFFFFF;
+                        line-height: 2.933vw;
+                        text-align: center;
+                        font-style: normal;
+                        text-transform: none;
+                        white-space: nowrap;
+                    }
+                }
+
+                .top-item:nth-child(1) {
+
+                    .top-item-icon {
+                        background: url('@/assets/connect/item-2-mobile.png');
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .top-item:nth-child(2) {
+
+                    .top-item-icon {
+                        background: url('@/assets/connect/item-1-mobile.png');
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .top-item:nth-child(3) {
+
+                    .top-item-icon {
+                        background: url('@/assets/connect/item-3-mobile.png');
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .top-item:nth-child(4) {
+
+                    .top-item-icon {
+                        background: url('@/assets/connect/item-4-mobile.png');
+                        background-size: 100% 100%;
+                    }
+                }
+
+                .top-item:nth-child(5) {
+
+                    .top-item-icon {
+                        background: url('@/assets/connect/item-5-mobile.png');
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+
+            .drawer-content-bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                height: 45.067vw;
+                margin-right: 0;
+                padding: 6.133vw;
+                background: url('@/assets/connect/left-bg-mobile.png');
+                background-size: 100% 100%;
+                margin-top: 7.333vw;
+
+                .bottom-title {
+                    font-family: Inter, Inter;
+                    font-weight: bold;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-style: normal;
+                    text-transform: none;
+                    font-size: 4.533vw;
+                    line-height: 5.333vw;
+                }
+
+                .bottom-desc {
+                    font-size: 3.067vw;
+                    line-height: 5.333vw;
+                    font-family: Inter, Inter;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-style: normal;
+                    text-transform: none;
+                }
+
+                .bottom-link {
+                    font-size: 3.6vw;
+                    line-height: 4.133vw;
+
+                    font-family: Inter, Inter;
+                    font-weight: 400;
+                    color: #00E25B;
+                    text-align: center;
+                    font-style: normal;
+                    text-transform: none;
+                }
+            }
+        }
+
+        .ant-drawer-header {
+            padding: 6.133vw 6.133vw 3.067vw;
+        }
+
+        .ant-drawer-body {
+            padding: 6.133vw;
+        }
+
+
+        .ant-drawer-header-title .ant-drawer-title {
+            font-size: 5.067vw;
+            line-height: 6vw;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .ant-drawer-header-title .ant-drawer-close {
+            display: none;
+        }
+    }
+
+    .wallet-adapter-dropdown {
+        opacity: 0;
+    }
+}
